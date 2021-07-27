@@ -7,9 +7,21 @@
         http://www.springframework.org/schema/context
         http://www.springframework.org/schema/context/spring-context.xsd">
 
-  <bean id="testBean"
-        class="by.itstep.TestBean">
-    <constructor-arg value="CopetS"/>
+    <context:property-placeholder location="classpath:musicPlayer.properties"/>
+
+  <bean id="musicBean"
+        class="by.itstep.ClassicalMusic"
+        init-method="doMyInit"
+        destroy-method="doMyDestroy"
+        factory-method="getClassicalMusic">
   </bean>
+
+<!-- <bean id="musicPlayer"
+        class="by.itstep.MusicPlayer"
+        scope="prototype">
+      <property name="music" ref="musicBean"/>
+      <property name="name" value="${musicPlayer.name}"/>
+      <property name="volume" value="${musicPlayer.volume}" />
+  </bean>-->
 
 </beans>
