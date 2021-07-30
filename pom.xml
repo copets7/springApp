@@ -80,6 +80,11 @@
       <artifactId>spring-context</artifactId>
       <version>5.3.9</version>
     </dependency>
+    <dependency>
+      <groupId>org.apache.geronimo.specs</groupId>
+      <artifactId>geronimo-annotation_1.0_spec</artifactId>
+      <version>1.0</version>
+    </dependency>
 
   </dependencies>
 
